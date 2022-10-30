@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(228, 169, 95);
+    grid-template-rows: repeat (5, 0,5fr);
+    padding: 5%;
+    scroll-padding: 2em;
+    row-gap: 3px;
+    grid-gap: 20px;
+    gap: 30px;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+    }
+
+    header {
+        grid-area: header;
+        padding-block-end: 5%;
+        background-image: url(https://www.icone-gif.com/gif/ecole/eleves-et-profs/ecole_etudiant03.gif);
+        background-repeat: no-repeat;
+        background-position: right; 
+    }
+
+    nav {
+        grid-area: nav;
+        align-items: center;
+        border-bottom: 1px solid;
+    }
+
+    main {
+        grid-area: main; 
+        padding: 2%;    
+        }
+
+    aside {
+        grid-area: aside;
+        padding: 5%;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: white;   
+        border-top: 1px solid;
+    }
+
+h1 {
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: left;
+    padding: 5%;
+}
+
+p {
+    text-align: justify;
+    color: rgb(76, 70, 70);
+    padding: 5%;
+    
+}
+
+li {
+    list-style-type: none;
+
+}
+
+.article {
+    gap: 5px;
+    padding: none;
+}
+
+#article-1 {
+    background-color: bisque;
+}
+
+#article-2 {
+    background-color: beige;
+}
+
+#article-3 {
+    background-color: blanchedalmond;
+}
+
+.side {
+    background-color: burlywood;
+}
+
+.navbar {
+    display: grid;
+}
+
+.icons {
+    display: flex;
+    justify-content:center;
+}
+
+@media screen and (min-width: 400px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+
+
+@media screen and (min-width: 700px) {
+    body
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0,5fr 1fr 1fr 0,5fr;
+      grid-template-areas:  "header nav"         
+                            "main main"
+                            "aside aside"
+                            "footer footer";
+    }
+              
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+ 
+    
+    }
+  }
+    
+
+    @media screen and (min-width: 1050px) {   
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0,5fr 1fr 0,5fr ; 
+        grid-template-areas:
+                "header nav nav"
+                "main main aside"
+                "footer footer footer";
+
+  }
+
+    aside {
+        margin: 20%;
+    }
+    
+    }
